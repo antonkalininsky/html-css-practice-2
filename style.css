@@ -37,9 +37,9 @@ body {
 /* container */
 .container {
     width: 100%;
-    max-width: 1200px; /*1440px*/
+    max-width: calc(1440px - 80px - 80px); /*1440px*/
     margin: 0 auto;
-    padding: 0 10px; /*80*/
+    padding: 0 80px; /*80*/
 }
 
 /* header */
@@ -52,17 +52,53 @@ body {
 }
 
 .logo {
-
-    width: 110px;
-    height: 85px;
+    position: relative;
+    width: 80px;
+    height: 50px;
     background-color: transparent;
-    border: 1px solid #131C30;
+    border: 8px solid #131C30;
+}
+
+.logo__wrap {
+    width: 70px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .logo__item {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    white-space: pre;
+
     color: #131C30;
     font-size: 45px;
     font-family: "kino-regular";
+}
+
+.logo__item::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    content: attr(data-content);
+    overflow: hidden;
+
+    color: #BC2630;
+    font-size: 45px;
+    font-family: "kino-regular";
+}
+
+.logo__item--first {
+    color: #BC2630;
+}
+
+.logo__item--first::before {
+    color: #131C30;
 }
 
 .nav__item {
@@ -82,9 +118,13 @@ body {
 }
 
 /* intro */
-.intro-header {
-    margin-top: 166px;
+.intro {
+    position: relative;
+    padding-top: 144px;
+}
 
+.intro-header {
+    max-width: 936px;
     color: #131C30;
     font-size: 96px;
     font-family: "kino-regular";
@@ -103,12 +143,40 @@ body {
 
     background-color: #7C0E13E5;
     padding: 26px 84px;
-    
-
 
     color: #131C30;
     font-size: 40px;
     font-family: "oswald-regular";
 
     margin-top: 20px;
+}
+
+.bg {
+    z-index: -5;
+   
+    position: absolute;
+    top: 0;
+    right: -80px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+.bg__item {
+    height: 813px;
+    width: 331px;
+    margin-left: 21px;
+}
+
+.bg__item--red {
+    background-color: #BC2630   ;
+}
+
+.bg__item--yellow {
+    background-color: #CC9226;
+}
+
+.bg__item--blue {
+    background-color: #454E62;
 }
