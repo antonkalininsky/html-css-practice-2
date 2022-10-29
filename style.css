@@ -1,0 +1,114 @@
+/* fonts */
+@font-face {
+    font-family: "kino-regular";
+    src: url("./assets/fonts/Kino-Regular.ttf");
+}
+@font-face {
+    font-family: "inter-semibold";
+    src: url("./assets/fonts/Inter-SemiBold.ttf");
+}
+@font-face {
+    font-family: "oswald-light";
+    src: url("./assets/fonts/Oswald-Light.ttf");
+}
+@font-face {
+    font-family: "oswald-medium";
+    src: url("./assets/fonts/Oswald-Medium.ttf");
+}
+@font-face {
+    font-family: "oswald-medium";
+    src: url("./assets/fonts/Oswald-Regular.ttf");
+}
+@font-face {
+    font-family: "roboflex-regular";
+    src: url("./assets/fonts/RobotoFlex-Regular.ttf");
+}
+
+/* global */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FDFBF4;
+}
+
+/* container */
+.container {
+    width: 100%;
+    max-width: 1200px; /*1440px*/
+    margin: 0 auto;
+    padding: 0 10px; /*80*/
+}
+
+/* header */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.logo {
+
+    width: 110px;
+    height: 85px;
+    background-color: transparent;
+    border: 1px solid #131C30;
+}
+
+.logo__item {
+    color: #131C30;
+    font-size: 45px;
+    font-family: "kino-regular";
+}
+
+.nav__item {
+    color: #131C30;
+    margin-right: 38px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "inter-semibold";
+}
+
+.nav__item:last-child {
+    margin-right: 0;
+}
+
+.nav__item:hover {
+    text-decoration: underline;
+}
+
+/* intro */
+.intro-header {
+    margin-top: 166px;
+
+    color: #131C30;
+    font-size: 96px;
+    font-family: "kino-regular";
+}
+
+.intro-subheader {
+    margin-top: 20px;
+    color: #131C30;
+    font-size: 64px;
+    font-family: "oswald-regular";
+}
+
+.excursions-btn {
+    display: none;
+    
+
+    background-color: #7C0E13E5;
+    padding: 26px 84px;
+    
+
+
+    color: #131C30;
+    font-size: 40px;
+    font-family: "oswald-regular";
+
+    margin-top: 20px;
+}
