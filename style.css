@@ -221,8 +221,32 @@ body {
     width: 522px;
     height: 112px;
     background-color: #7C0E13E5;
+    position: relative;
+    
+    transition: background-color 0.1s linear,
+                border 0.1s linear;
+}
+
+.ex-btn:hover {
     box-sizing: border-box;
-    padding: 20px 0;
+    border: 12px solid #540006;
+}
+
+.ex-btn:focus {
+    background-color: #540006;
+}
+
+.ex-btn:disabled {
+    background-color: #555555;
+}
+
+.ex-btn-text {
+    width: max-content;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     color: #FDFBF4;
     font-size: 40px;
@@ -276,16 +300,108 @@ body {
 }
 
 /* authors */
+.author__item {
+    position: relative;
+    margin-top: 120px;
+}
+
+.author__item:first-child {
+    margin-top: 40px;
+}
+
+.author-img-box {
+    position: absolute;
+    left: -80px;
+    bottom: 0px;
+}
+
+.author-img {
+    width: 507px;
+    height: auto;
+}
+
+.author-shadow {
+    position: absolute;
+    z-index: -1;
+}
+
+.author__item--tatlin .author-shadow {
+    left: -11px;
+    width: 425.66px;
+    height: 585.66px;
+}
+
+.author__item--rodchenko .author-shadow {
+    top: 22px;
+    left: 266px;
+    width: 240.66px;
+    height: 585.66px;
+}
+
+.author__item--lisicki .author-shadow {
+    top: 38px;
+    left: -16px;
+    width: 219.66px;
+    height: 559.66px;
+}
+
 .author-about {
+    margin-left: calc(495px + 44px);
     max-width: 630px;
 }
 
+.author__item--swap .author-about {
+    margin-left: 40px;
+}
+
+.author__item--swap .author-img-box {
+    left: unset;
+    right: -80px;
+}
+
 .author-name {
+    position: relative;
     font-family: "oswald-regular";
     font-weight: 300;
     font-size: 48px;
-
     color: #131C30;
+}
+
+.author-name::before {
+    content: '';
+    display: block;
+    width: 110px;
+    /* height: 280px; */
+    background-color: #CC9226;
+
+    position: absolute;
+    /* top: -55px;
+    left: 50px; */
+    transform: rotate(-95deg);
+
+    z-index: -1;
+}
+
+.author__item--tatlin .author-name::before {
+    height: 270px;
+    top: -52px;
+    left: 40px;
+}
+
+.author__item--rodchenko .author-name::before {
+    height: 322px;
+    top: -74px;
+    left: 66px;
+}
+
+.author__item--lisicki .author-name::before {
+    height: 349px;
+    top: -90px;
+    left: 78px;
+}
+
+.author__item--swap .author-name::before {
+    transform: rotate(-85deg);
 }
 
 .author-surname {
@@ -309,7 +425,43 @@ body {
     width: 413px;
     height: 124px;
     background: #454E62;
+    margin-top: 32px;
 
+    position: relative;
+
+    transition: background-color 0.1s linear,
+                border 0.1s linear;
+}
+
+.more-info:hover {
+    box-sizing: border-box;
+    border: 12px solid #131C30;
+}
+
+.more-info:focus {
+    background-color: #131C30;
+}
+
+.more-info:disabled {
+    background-color: #555555;
+}
+
+.more-info__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 350px;
+}
+
+.more-info-text {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    position: relative;
+    
     color: #FDFBF4;
     text-transform: uppercase;
     font-size: 40px;
@@ -319,27 +471,94 @@ body {
     letter-spacing: -0.015em;
     text-decoration: none;
 
-    position: relative;
-    margin-top: 32px;
+    width: 100%;
 }
 
-.more-info::before {
+.more-info-text::before {
     content: '';
     display: block;
     width: 134px;
     height: 5px;
     background-color: #FDFBF4;
-
+    
     position: absolute;
     top: 50%;
-    left: 75%;
+    right: -130%;
     transform: translate(-50%, -50%);
 }
 
-.more-info-text {
+.more-info-text::after {
+    content: '';
+    display: block;
+    border: solid #FDFBF4;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(-45deg);
+
+    position: absolute;
+    top: 38%;
+    right: -94%;
+}
+
+.more-authors-wrap {
+    width: 100%;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.more-authors {
+    margin: 0 auto;
+
+    display: block;
+    width: 572px;
+    height: 60px;
+
+    font-family: 'oswald-regular';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #454E62;
+    text-align: left;
+
+    position: relative;
+}
+
+.more-authors::after {
+    content: '';
+    display: inline-block;
+    width: 134px;
+    height: 5px;
+    background: #454E62;
+
     position: absolute;
     top: 50%;
-    left: 30%;
+    right: -10%;
     transform: translate(-50%, -50%);
 }
 
+.more-authors::before {
+    content: '';
+    display: block;
+    border: solid #454E62;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(-45deg);
+
+    position: absolute;
+    top: 38%;
+    right: 1.5%;
+}
+
+.more-authors:hover {
+    text-decoration: underline;
+}
+
+.filler {
+    width: 10px;
+    height: 1000px;
+}

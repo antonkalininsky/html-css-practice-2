@@ -49,7 +49,9 @@
                 <h1 class="intro-header header-shadow" data-content="Музей конструктивизма">Музей конструктивизма</h1>
                 <h2 class="intro-subheader header-shadow" data-content="Онлайн экскурсии">Онлайн экскурсии</h2>
             </hgroup>
-            <a class="ex-btn" href="#">Выбрать экскурсию</a>
+            <a class="ex-btn" href="#">
+                <div class="ex-btn-text">Выбрать экскурсию</div>
+            </a>
             <article class="intro-article">Границы реального и виртуального постепенно стираются и музеи выходят
                 за пределы собственного здания. Цифровые коммуникации позволяют посещать выставки из любой точки мира.
             </article>
@@ -61,29 +63,82 @@
             <header class="section-header">Сейчас в музее</header>
 
             <div class="authors">
-                <div class="author__item">
-                    <img src="" alt="">
+                <div class="author__item author__item--tatlin">
+                    <div class="author-img-box">
+                        <img class="author-img" src="./assets/authors/1.png" alt="">
+                        <img class="author-shadow" src="./assets/authors/1s.png" alt="">
+                    </div>
+
                     <article class="author-about">
-                        <h2 class="author-name">
+                        <h2 data-len="500px" class="author-name">
                             Владимир<br>
                             <span class="author-surname">Татлин</span>
                         </h2>
                         <p class="author-intro">Отец художественного авангарда. Его мастерство было основано
                             на стремлении к радикальному преобразованию и смелости отвергнуть художественные догмы.</p>
-                        <a href="#" class="more-info"><div class="more-info-text">Подробнее</div></a>
+                        <a href="#" class="more-info">
+                            <div class="more-info__inner">
+                                <span class="more-info-text">Подробнее</span>
+                            </div>
+                        </a>
                     </article>
-
                 </div>
                 <!--/author__item-->
+
+                <div class="author__item author__item--swap author__item--rodchenko">
+                    <div class="author-img-box">
+                        <img class="author-img" src="./assets/authors/2.png" alt="">
+                        <img class="author-shadow" src="./assets/authors/2s.png" alt="">
+                    </div>
+                    <article class="author-about">
+                        <h2 class="author-name">
+                            Алесандр<br>
+                            <span class="author-surname">Родченко</span>
+                        </h2>
+                        <p class="author-intro">Он был одним из плеяды русских художников, творчество которых раскрылось
+                            на идеях революции, идеях ломки старого мира и образования новой среды.</p>
+                        <a href="#" class="more-info">
+                            <div class="more-info__inner">
+                                <span class="more-info-text">Подробнее</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <!--/author__item-->
+
+                <div class="author__item author__item--lisicki">
+                    <div class="author-img-box">
+                        <img class="author-img" src="./assets/authors/3.png" alt="">
+                        <img class="author-shadow" src="./assets/authors/3s.png" alt="">
+                    </div>
+                    <article class="author-about">
+                        <h2 class="author-name author-name--long">
+                            Эль<br>
+                            <span class="author-surname">Лисицкий</span>
+                        </h2>
+                        <p class="author-intro">Титан русского авангарда. Эксперименты Лисицкого серьезно повлияли на
+                            архитектуру и дизайн, какими мы их знаем сегодня.</p>
+                        <a href="#" class="more-info">
+                            <div class="more-info__inner">
+                                <span class="more-info-text">Подробнее</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <!--/author__item-->
+
             </div>
             <!--/authors-->
-
-            <a href="" class="more-authors">Смотреть все экскурсии</a>
-
+            <div class="more-authors-wrap">
+                <a href="" class="more-authors">Смотреть все экскурсии</a>
+            </div>
         </section>
+
+
 
     </div>
     <!--/container-->
+    <div class="filler"></div>
 
 
 </body>
