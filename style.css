@@ -45,6 +45,7 @@ body {
     max-width: calc(1440px - 80px - 80px);
     margin: 0 auto;
     padding: 0 80px;
+    overflow: hidden;
 }
 
 
@@ -326,15 +327,15 @@ body {
 }
 
 .author__item--tatlin .author-shadow {
-    left: -11px;
-    width: 425.66px;
-    height: 585.66px;
+    left: -16px;
+    width: 385.66px;
+    height: 589.66px;
 }
 
 .author__item--rodchenko .author-shadow {
-    top: 22px;
-    left: 266px;
-    width: 240.66px;
+    top: 26px;
+    right: -18px;
+    width: 260.66px;
     height: 585.66px;
 }
 
@@ -371,14 +372,10 @@ body {
     content: '';
     display: block;
     width: 110px;
-    /* height: 280px; */
     background-color: #CC9226;
 
     position: absolute;
-    /* top: -55px;
-    left: 50px; */
     transform: rotate(-95deg);
-
     z-index: -1;
 }
 
@@ -391,7 +388,7 @@ body {
 .author__item--rodchenko .author-name::before {
     height: 322px;
     top: -74px;
-    left: 66px;
+    left: 74px;
 }
 
 .author__item--lisicki .author-name::before {
@@ -456,10 +453,6 @@ body {
 }
 
 .more-info-text {
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     position: relative;
 
     color: #FDFBF4;
@@ -558,11 +551,6 @@ body {
     text-decoration: underline;
 }
 
-.filler {
-    width: 10px;
-    height: 1000px;
-}
-
 /* shop */
 .shop {
     margin-top: 40px;
@@ -604,6 +592,7 @@ body {
 /* footer */
 .footer {
     margin-top: 120px;
+    margin-bottom: 70px;
 }
 
 .rec-line {
@@ -729,6 +718,9 @@ body {
     color: #131C30;
 }
 
+
+
+
 .mail-sub form {
     display: flex;
     justify-content: flex-end;
@@ -753,6 +745,10 @@ body {
     color: #03060E;
 }
 
+.mail-sub .input:disabled {
+    border: 4px solid #555555;
+}
+
 .mail-sub .input::placeholder {
     font-family: 'roboflex-regular';
     font-weight: 400;
@@ -768,13 +764,17 @@ body {
     height: 100%;
     background: #131C30;
     border: none;
+
+    position: relative;
+    background: url('./assets/arrow.png') #131C30 no-repeat scroll 20px 25px;
+    padding: 20px 0 0 20px;
+
+    cursor: pointer;
 }
 
-/* .mail-sub .button::before {
+.mail-sub .button:disabled {
+    background: url('./assets/arrow.png') #555555 no-repeat scroll 20px 25px;
 }
-
-.mail-sub .button::before {
-} */
 
 .ending {
     margin-top: 35px;
